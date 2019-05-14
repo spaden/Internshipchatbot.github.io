@@ -53,14 +53,16 @@ class botchat {
         this.outer2.className = "row";
 
         this.dummy = document.createElement('span');
-        this.dummy.className = "col-md-7 col-sm-6 col-xs-6 col-lg-7 col-xl-7";
+        this.dummy.className = "col-md-7 col-sm-1 col-xs-1 col-lg-7 col-xl-7";
 
         this.outer2.append(this.dummy);
 
         this.mainTag = document.createElement("div");
-        this.mainTag.className = "col-md-4 col-sm-5 col-xs-5 col-lg-4 col-xl-4";
+        this.mainTag.className = "col-md-4 col-sm-10 col-xs-10 col-lg-4 col-xl-4";
         this.mainTag.style = stylesMain;
         this.mainTag.id = "mainTag";
+
+
 
         var main1 = document.createElement('div');
         main1.style = stylesRw;
@@ -85,6 +87,11 @@ class botchat {
         this.usmessage();
 
         this.outer2.append(this.mainTag);
+        this.dummy2 = document.createElement('span');
+        this.dummy2.className = "col-md-1 col-sm-1 col-xs-1 col-xl-1 col-lg-1";
+
+        this.outer2.append(this.dummy2);
+
         this.outer.append(this.outer2);
         document.body.append(this.outer);
 
