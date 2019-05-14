@@ -15,7 +15,7 @@ class botchat {
               margin-top: 9%;
               height: 535px;
               width: auto; 
-              margin-left: 58.5%;  
+                
               box-shadow: -1px 2px 10px 2px #888888;
         `;
 
@@ -53,12 +53,12 @@ class botchat {
         this.outer2.className = "row";
 
         this.dummy = document.createElement('span');
-        this.dummy.className = "col-md-1 col-sm-1 col-xs-1 col-lg-1 col-xl-1";
+        this.dummy.className = "col-md-7 col-sm-6 col-xs-6 col-lg-7 col-xl-7";
 
         this.outer2.append(this.dummy);
 
         this.mainTag = document.createElement("div");
-        this.mainTag.className = "col-md-4 col-sm-6 col-xs-7 col-lg-4 col-xl-4";
+        this.mainTag.className = "col-md-4 col-sm-5 col-xs-5 col-lg-4 col-xl-4";
         this.mainTag.style = stylesMain;
         this.mainTag.id = "mainTag";
 
