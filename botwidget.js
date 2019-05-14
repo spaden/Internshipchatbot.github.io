@@ -15,7 +15,7 @@ class botchat {
               margin-top: 9%;
               height: 535px;
               width: auto; 
-                
+              margin-right: 2%;  
               box-shadow: -1px 2px 10px 2px #888888;
         `;
 
@@ -94,7 +94,6 @@ class botchat {
 
         this.outer.append(this.outer2);
         document.body.append(this.outer);
-
 
 
     }
