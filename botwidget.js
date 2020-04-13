@@ -11,7 +11,7 @@ class botchat {
         //whole box main container style
         let stylesMain = `
               border-radius: 20px;
-              background-color: #FEFEFE  ;
+              background-color: #FEFEFE;
               margin-top: 9%;
               height: 535px;
               width: auto; 
@@ -21,11 +21,11 @@ class botchat {
 
         // image box styles
         var stylesHd = `
-            margin-left: 2%;
-            margin-bottom: 6%;
-            margin-top: 5%;
-            height: 5%;
-            width: 20%;
+            margin-left: 45%;
+            margin-bottom: 2%;
+            margin-top: 3%;
+            height: 10%;
+            width: 9%;
             opacity: 0.8;
             box-shadow: -2px 3px 2px #888888;
             background-color: #CEE8CE;
@@ -44,6 +44,8 @@ class botchat {
 
         var stylesRw = `
            opacity: 0.7;
+           background-color: #F9F8F8;
+           margin-bottom: 3%;
         `
 
         this.outer = document.createElement('div');
@@ -54,6 +56,7 @@ class botchat {
 
         this.dummy = document.createElement('span');
         this.dummy.className = "col-md-7 col-sm-1 col-xs-1 col-lg-7 col-xl-7";
+        
 
         this.outer2.append(this.dummy);
 
@@ -70,7 +73,7 @@ class botchat {
 
         var tit = document.createElement("img");
         tit.className = "rounded";
-        tit.src = "chatbot.jpg";
+        tit.src = "chatbot1.png";
         tit.style = stylesHd;
 
 
@@ -80,8 +83,8 @@ class botchat {
         this.messagesDiv.id = "info";
         this.messagesDiv.style = stylesMg;
 
-        this.mainTag.append(tit);
-        this.mainTag.append(document.createElement('br'));
+        this.mainTag.append(main1);
+        //this.mainTag.append(document.createElement('br'));
 
         this.mainTag.append(this.messagesDiv);
         this.usmessage();
@@ -151,7 +154,7 @@ class botchat {
         group.style = styles;
         var sendMessage = document.createElement('input');
         sendMessage.id = "usInput";
-        //sendMessage.placeholder = "Ask the bot!"
+        sendMessage.placeholder = "Ask the bot!"
         sendMessage.className = "form-control";
         sendMessage.style = styles;
 
@@ -218,21 +221,22 @@ function sendUserMessage(message) {
     `;*/
 
     var styles = `
-    background-color: #A2B1D3;
+    background-color: #EADEDB;
     opacity: 0;
-    border-radius: 30px 25px 10px ;
+    border-radius: 10px 10px 10px 10px;
     width: auto;
     height: auto;
     margin-left: 22%;
     margin-right: 2%;
-    padding-left: 5%;
-    padding-right: 3%;
-    padding-bottom: 0.2%;
+    padding-left: 4%;
     padding-top: 4%;
+    padding-right: 4%;
+    padding-bottom: 0.2%;
+    
     float: right;
     clear: left;
     margin-bottom: 5%;
-    box-shadow: -1px -1px 2px #888888;
+    
     `;
     var userTyped = document.createElement('div');
     userTyped.style = styles;
@@ -314,7 +318,7 @@ function requestMessage() {
     var styles = `
     background-color: #E0E5CF;
     opacity: 0;
-    border-radius: 30px 50px 50px 40px;
+    border-radius: 10px 10px 10px 10px;
     width: auto;
     height: auto;
     float: left;
@@ -511,13 +515,14 @@ function anim(which, who) {
         if (who == 1) {
             animLag();
             console.log("Who is " + who)
+            
 
         } else if (who == 2) {
             console.log("Who is " + who);
             document.getElementById('usInput').disabled = false;
             document.getElementById('usInput').value = "";
             document.getElementById('usInput').focus();
-            //document.getElementById('usInput').placeholder = "Ask the bot!";
+            document.getElementById('usInput').placeholder = "Ask the bot!";
             //sendUserMessage.disabled = false;
             console.log("Checkin" + sendMessage.disabled);
         }
